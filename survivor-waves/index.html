@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Survivor Waves - Um jogo roguelike de sobrevivência contra hordas de inimigos. Mova-se, atire e evolua!">
+    <title>Survivor Waves</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Wave Announcement -->
+    <div id="waveAnnounce"></div>
+
+    <!-- Main Menu -->
+    <div id="menuScreen" class="overlay">
+        <h1 class="menu-title">SURVIVOR WAVES</h1>
+        <p class="menu-subtitle">Sobreviva à horda</p>
+        <button id="startBtn" class="btn-primary">Iniciar Jogo</button>
+        <div class="menu-controls">
+            <span><span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span> Mover</span>
+            <span>🖱️ Clique para Atirar</span>
+        </div>
+    </div>
+
+    <!-- Upgrade Selection -->
+    <div id="upgradeScreen" class="overlay">
+        <h2 class="upgrade-title">ESCOLHA UM UPGRADE</h2>
+        <div id="upgradeCards"></div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="gameOverScreen" class="overlay">
+        <h2 class="gameover-title">GAME OVER</h2>
+        <div class="gameover-stats">
+            <div class="stat-box">
+                <div class="stat-label">Ondas Sobrevividas</div>
+                <div class="stat-value" id="finalWave">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Pontuação</div>
+                <div class="stat-value highlight" id="finalScore">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Recorde</div>
+                <div class="stat-value" id="highScoreVal">0</div>
+            </div>
+        </div>
+        <button id="restartBtn" class="btn-primary">Jogar Novamente</button>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
